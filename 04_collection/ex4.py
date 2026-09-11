@@ -129,7 +129,8 @@ stocks = (
 )
 
 # 총 재고 금액 출력
-sum = 0
-for entry in stocks:                                                    # ✅ 총액: 21,000원
-    sum += entry[1] * entry[2]
-print(f"총액: {sum}원")
+
+total = sum(price * qty for _, price, qty in stocks)       # ✅ 총액: 21,000원
+total = sum([price * qty for _, price, qty in stocks])
+
+print(f"총액: {total:,}원")
