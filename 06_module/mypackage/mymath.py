@@ -1,0 +1,6 @@
+# 사용자 정의 모듈
+print("start2:", __name__)
+PI = 3.1415
+
+def add(a, b):
+    return a + b
